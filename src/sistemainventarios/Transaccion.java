@@ -1,53 +1,73 @@
 /*
  * Transacción: una clase para representar una transacción que involucra artículos en el inventario, 
- * con campos para propiedades como fecha, tipo (por ejemplo, compra, venta, transferencia) y artículos involucrados. 
- * Esta clase también incluye métodos para obtener y establecer estas propiedades, 
- * así como cualquier otro método relacionado con las transacciones 
- * (por ejemplo, calcular el valor total de la transacción).
+ * con campos para propiedades como fecha, vendedor, artículos vendidos, costo total y tipo de transacción.
  */
 package sistemainventarios;
 import java.util.Scanner;
+import java.util.Date;
+
 
 /**
  *
  * @author Camila Díaz - Alejandro Velandia - Daniel Ayala
  */
 public class Transaccion {
-    private String fecha;
-    private String tipo;
-    private Articulo articulo;
+    private Date fecha;
+    private String vendedor;
+    private String articulosVendidos;
+    private double costoTotal;
+    private String tipoTransaccion;
 
-    public Transaccion(String fecha, String tipo, Articulo articulo) {
-        this.fecha = fecha;
-        this.tipo = tipo;
-        this.articulo = articulo;
+    public Transaccion(String fecha2, String vendedor, String articulosVendidos, double costoTotal, double valorTotal) {
+        this.fecha = fecha2;
+        this.vendedor = vendedor;
+        this.articulosVendidos = articulosVendidos;
+        this.costoTotal = costoTotal;
+        this.tipoTransaccion = valorTotal;
     }
 
-    public String getFecha() {
+    public Date getFecha() {
         return fecha;
     }
 
-    public void setFecha(String fecha) {
+    public void setFecha(Date fecha) {
         this.fecha = fecha;
     }
 
-    public String getTipo() {
-        return tipo;
+    public String getVendedor() {
+        return vendedor;
     }
 
-    public void setTipo(String tipo) {
-        this.tipo = tipo;
+    public void setVendedor(String vendedor) {
+        this.vendedor = vendedor;
     }
 
-    public Articulo getArticulo() {
-        return articulo;
+    public String getArticulosVendidos() {
+        return articulosVendidos;
     }
 
-    public void setArticulo(Articulo articulo) {
-        this.articulo = articulo;
+    public void setArticulosVendidos(String articulosVendidos) {
+        this.articulosVendidos = articulosVendidos;
     }
-    
-    public double calcularValor(){
-        return articulo.getCantidad()*articulo.getPrecio();
+
+    public double getCostoTotal() {
+        return costoTotal;
+    }
+
+    public void setCostoTotal(double costoTotal) {
+        this.costoTotal = costoTotal;
+    }
+
+    public String getTipoTransaccion() {
+        return tipoTransaccion;
+    }
+
+    public void setTipoTransaccion(String tipoTransaccion) {
+        this.tipoTransaccion = tipoTransaccion;
+    }
+
+    @Override
+    public String toString() {
+        return "Transaccion{" + "fecha=" + fecha + ", vendedor=" + vendedor + ", articulosVendidos=" + articulosVendidos + ", costoTotal=" + costoTotal + ", tipoTransaccion=" + tipoTransaccion + '}';
     }
 }

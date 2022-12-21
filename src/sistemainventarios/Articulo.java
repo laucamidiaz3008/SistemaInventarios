@@ -4,6 +4,7 @@
  * Esta clase también incluye métodos para obtener y establecer estas propiedades, 
  * así como cualquier otro método relacionado con artículos individuales 
  * (por ejemplo, calcular el valor del artículo en función de su precio y cantidad).
+ * Crear artículo
  */
 package sistemainventarios;
 import java.util.Scanner;
@@ -65,4 +66,5 @@ public class Articulo {
     public String toString() {
         return "Articulo{" + "nombre=" + nombre + ", codigo=" + codigo + ", cantidad=" + cantidad + ", precio=" + precio + '}';
     }
+
 }

@@ -14,70 +14,44 @@ import java.util.Scanner;
  */
 public class Ubicacion {
     private String nombre;
-    private String direccion;
-    private int capacidad;
-    private int cantidad;
+    private String pasillo;
+    private String estante;
+    private String nivel;
 
-    public Ubicacion(String nombre, String direccion, int capacidad, int cantidad) {
+    public Ubicacion(String nombre, String pasillo, String estante, String nivel) {
         this.nombre = nombre;
-        this.direccion = direccion;
-        this.capacidad = capacidad;
-        this.cantidad = cantidad;
+        this.pasillo = pasillo;
+        this.estante = estante;
+        this.nivel = nivel;
     }
 
     public String getNombre() {
         return nombre;
     }
-
     public void setNombre(String nombre) {
         this.nombre = nombre;
     }
-
-    public String getDireccion() {
-        return direccion;
+    public String getPasillo() {
+        return pasillo;
+    }
+    public void setPasillo(String pasillo) {
+        this.pasillo = pasillo;
+    }
+    public String getEstante() {
+        return estante;
+    }
+    public void setEstante(String estante) {
+        this.estante = estante;
+    }
+    public String getNivel() {
+        return nivel;
+    }
+    public void setNivel(String nivel) {
+        this.nivel = nivel;
     }
 
-    public void setDireccion(String direccion) {
-        this.direccion = direccion;
-    }
-
-    public int getCapacidad() {
-        return capacidad;
-    }
-
-    public void setCapacidad(int capacidad) {
-        this.capacidad = capacidad;
-    }
-
-    public int getCantidad() {
-        return cantidad;
-    }
-
-    public void setCantidad(int cantidad) {
-        this.cantidad = cantidad;
-    }
-    
-    public double calcularUtilizacion(){
-        return (cantidad*100)/capacidad;
-    }
-    
-    public void mostrar(){
-        System.out.println("Nombre: "+nombre);
-        System.out.println("Dirección: "+direccion);
-        System.out.println("Capacidad: "+capacidad);
-        System.out.println("Cantidad: "+cantidad);
-        System.out.println("Utilización: "+calcularUtilizacion()+"%");
-    }
-    
-    public void ingresar(){
-        Scanner sc = new Scanner(System.in);
-        System.out.println("Ingrese el nombre de la ubicación: ");
-        nombre = sc.nextLine();
-        System.out.println("Ingrese la dirección de la ubicación: ");
-        direccion = sc.nextLine();
-        System.out.println("Ingrese la capacidad de la ubicación: ");
-        capacidad = sc.nextInt();
-        System.out.println("Ingrese la cantidad de artículos en la ubicación: ");
-        cantidad = sc.nextInt();
+    @Override
+    public String toString() {
+        return "Ubicacion{" + "nombre=" + nombre + ", pasillo=" + pasillo + ", estante=" + estante + ", nivel=" + nivel + '}';
     }
 }

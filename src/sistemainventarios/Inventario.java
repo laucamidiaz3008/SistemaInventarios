@@ -12,65 +12,85 @@ import java.util.Scanner;
  */
 public class Inventario {
     private Articulo[] articulos;
-    private int cantidadArticulos;
-    private int maxArticulos;
     private Scanner sc = new Scanner(System.in);
-    
-    public Inventario(int maxArticulos) {
-        this.maxArticulos = maxArticulos;
-        this.articulos = new Articulo[maxArticulos];
-        this.cantidadArticulos = 0;
+
+    public Inventario(Articulo[] articulos) {
+        this.articulos = articulos;
     }
-    
-    public void agregarArticulo(Articulo articulo){
-        if(cantidadArticulos < maxArticulos){
-            articulos[cantidadArticulos] = articulo;
-            cantidadArticulos++;
-        }else{
-            System.out.println("No hay espacio para agregar más artículos");
-        }
+
+    public Articulo[] getArticulos() {
+        return articulos;
     }
-    
-    public void eliminarArticulo(String codigo){
-        int posicion = buscarArticulo(codigo);
-        if(posicion != -1){
-            for(int i = posicion; i < cantidadArticulos - 1; i++){
-                articulos[i] = articulos[i + 1];
-            }
-            cantidadArticulos--;
-        }else{
-            System.out.println("No se encontró el artículo");
-        }
+
+    public void setArticulos(Articulo[] articulos) {
+        this.articulos = articulos;
     }
-    
-    public void actualizarArticulo(String codigo){
-        int posicion = buscarArticulo(codigo);
-        if(posicion != -1){
-            System.out.println("Ingrese el nuevo nombre del artículo");
-            String nombre = sc.nextLine();
-            System.out.println("Ingrese la nueva cantidad del artículo");
-            int cantidad = sc.nextInt();
-            System.out.println("Ingrese el nuevo precio del artículo");
-            double precio = sc.nextDouble();
-            articulos[posicion].setNombre(nombre);
-            articulos[posicion].setCantidad(cantidad);
-            articulos[posicion].setPrecio(precio);
-        }else{
-            System.out.println("No se encontró el artículo");
-        }
-    }
-    
-    public int buscarArticulo(String codigo){
-        for(int i = 0; i < cantidadArticulos; i++){
-            if(articulos[i].getCodigo().equals(codigo)){
-                return i;
+
+    public void agregarArticulo(Articulo articulo) {
+        for (int i = 0; i < articulos.length; i++) {
+            if (articulos[i] == null) {
+                articulos[i] = articulo;
+                break;
             }
         }
-        return -1;
     }
-    
-    public void generarReporte(){
-        System.out.println("Nombre\t\tCódigo\t\tCantidad\t\tPrecio");
-        for(int i = 0; i < cantidadArticulos; i++){
-            System.out.println(articulos[i].getNombre() + "\t\t" + articulos[i].getCodigo() + "\t\t" + articulos[i].getCantidad() + "\t
+
+    public void eliminarArticulo(String codigo) {
+        for (int i = 0; i < articulos.length; i++) {
+            if (articulos[i].getCodigo().equals(codigo)) {
+                articulos[i] = null;
+                break;
+            }
+        }
+    }
+
+    public void actualizarArticulo(String codigo) {
+        for (int i = 0; i < articulos.length; i++) {
+            if (articulos[i].getCodigo().equals(codigo)) {
+                System.out.println("Ingrese el nuevo nombre del artículo: ");
+                articulos[i].setNombre(sc.nextLine());
+                System.out.println("Ingrese la nueva cantidad del artículo: ");
+                articulos[i].setCantidad(sc.nextInt());
+                System.out.println("Ingrese el nuevo precio del artículo: ");
+                articulos[i].setPrecio(sc.nextDouble());
+                break;
+            }
+        }
+    }
+
+    public void buscarArticulo(String codigo) {
+        for (int i = 0; i < articulos.length; i++) {
+            if (articulos[i].getCodigo().equals(codigo)) {
+                System.out.println("Nombre: " + articulos[i].getNombre());
+                System.out.println("Cantidad: " + articulos[i].getCantidad());
+                System.out.println("Precio: " + articulos[i].getPrecio());
+                break;
+            }
+        }
+    }
+
+    public void generarReporte() {
+        for (int i = 0; i < articulos.length; i++) {
+            if (articulos[i] != null) {
+                System.out.println("Nombre: " + articulos[i].getNombre());
+                System.out.println("Código: " + articulos[i].getCodigo());
+                System.out.println("Cantidad: " + articulos[i].getCantidad());
+                System.out.println("Precio: " + articulos[i].getPrecio());
+                System.out.println("Valor: " + articulos[i].getCantidad() * articulos[i].getPrecio());
+            }
+        }
+    }
+
+    public void mostrarArticulos() {
+        for (int i = 0; i < articulos.length; i++) {
+            if (articulos[i] != null) {
+                System.out.println("Nombre: " + articulos[i].getNombre());
+                System.out.println("Código: " + articulos[i].getCodigo());
+                System.out.println("Cantidad: " + articulos[i].getCantidad());
+                System.out.println("Precio: " + articulos[i].getPrecio());
+            }
+        }
+    }
+
 }
+    
