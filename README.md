@@ -1,6 +1,7 @@
 # SistemaInventarios
 
 *CLASES:*
+
 Artículo: una clase para representar un artículo individual en el inventario, con campos para propiedades como nombre, código, cantidad y precio. Esta clase también puede incluir métodos para obtener y establecer estas propiedades, así como cualquier otro método relacionado con artículos individuales (por ejemplo, calcular el valor del artículo en función de su precio y cantidad).
 
 Inventario: una clase para representar el inventario general, con una lista o colección de objetos Item. Esta clase puede incluir métodos para agregar, eliminar y actualizar artículos en el inventario, así como métodos para buscar artículos y generar informes sobre el inventario.
