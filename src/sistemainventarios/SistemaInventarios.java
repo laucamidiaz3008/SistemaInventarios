@@ -60,7 +60,7 @@ public class SistemaInventarios {
                     System.out.println("Saliendo...");
                     break;
                 default:
-                    System.out.println("Opcion no valida");
+                    System.out.println("Opción no valida");
                     break;
 
 }}
