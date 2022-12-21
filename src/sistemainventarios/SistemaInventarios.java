@@ -5,7 +5,7 @@ package sistemainventarios;
 
 /**
  *
- * @author Camila Díaz
+ * @author Camila Díaz - Alejandro Velandia - Daniel Ayala
  */
 public class SistemaInventarios {
 
