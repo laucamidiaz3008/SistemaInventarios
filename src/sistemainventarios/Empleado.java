@@ -5,8 +5,9 @@
 package sistemainventarios;
 
 /**
- *
- * @author User
+ * @author AYALA
+ * @author DIAZ
+ * @author VELANDIA
  */
 public class Empleado {
     
