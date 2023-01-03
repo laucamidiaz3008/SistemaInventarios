@@ -1,6 +1,5 @@
 /*
  * Clase principal del programa: SistemaDeInventario
- * que hace:
  * 1) Pide al usuario que ingrese el tipo de usuario que es
  * 2) Si el usuario es Admin, se ejecuta el metodo IngresarContraseñaAdmin de la clase Admin
  * 3) Si el usuario es Admin, se ejecuta el metodo CompararContraseñaAdmin de la clase Admin
