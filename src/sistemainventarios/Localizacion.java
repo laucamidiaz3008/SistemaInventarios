@@ -1,5 +1,6 @@
 /*
- * 
+ * Clase Localizacion:
+ * 1. Referencia a la ubicacion del producto
  */
 package sistemainventarios;
 

@@ -1,4 +1,10 @@
 /*
+ * Clase Producto:
+ * 1. Referencia al nombre del producto
+ * 2. Referencia a la descripcion del producto
+ * 3. Referencia al precio del producto
+ * 4. Referencia al costo de produccion del producto
+ * 5. Referencia a la cantidad del producto
  * 
  */
 package sistemainventarios;

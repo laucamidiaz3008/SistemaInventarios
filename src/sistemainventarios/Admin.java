@@ -1,9 +1,10 @@
+package sistemainventarios;
 /*
  * Establezca aleatoriamente contraseña de Usuario Administrador y guardar contraseña en un archivo de texto
  * Metodo para ingresar contraseña de Usuario Administrador
  * Metodo para comparar contraseña de Usuario Administrador con la contraseña guardada en el archivo de texto
  */
-package sistemainventarios.USUARIOS;
+
 import java.util.Random;
 import java.util.Scanner;
 

@@ -1,5 +1,6 @@
 /*
- * 
+ * Clase MovimientosFinancieros:
+ * 1. Referencia a 
  */
 package sistemainventarios;
 

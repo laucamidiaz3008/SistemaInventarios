@@ -1,5 +1,9 @@
 /*
- * 
+ * Clase MovimientoDelProducto:
+ * 1. Referencia a los movimientos del producto
+ * 2. Referencia a la localizacion del producto
+ * 3. Referencia a la cantidad del producto
+ * 4. Referencia a la fecha del movimiento
  */
 package sistemainventarios;
 

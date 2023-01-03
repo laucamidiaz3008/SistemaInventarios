@@ -1,5 +1,6 @@
 /*
- * 
+ * Clase Inventario
+ * que hace referencia a los movimientos del producto
  */
 package sistemainventarios;
 
