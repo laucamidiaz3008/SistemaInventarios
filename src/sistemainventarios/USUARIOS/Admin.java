@@ -1,6 +1,5 @@
 /*
- * Establezca aleatoriamente contraseña de Usuario Administrador
- * Guardar contraseña en un archivo de texto
+ * Establezca aleatoriamente contraseña de Usuario Administrador y guardar contraseña en un archivo de texto
  * Metodo para ingresar contraseña de Usuario Administrador
  * Metodo para comparar contraseña de Usuario Administrador con la contraseña guardada en el archivo de texto
  */
@@ -39,10 +38,11 @@ public class Admin {
     }
     
     public String GenerarContraseña(){
-        String Contraseña = "";
         Random r = new Random();
+        String Contraseña = "";
         for (int i = 0; i < 8; i++) {
-            Contraseña += r.nextInt(9);
+            int n = r.nextInt(10);
+            Contraseña = Contraseña + n;
         }
         return Contraseña;
     }

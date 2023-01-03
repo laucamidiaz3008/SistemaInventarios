@@ -1,5 +1,26 @@
 /*
- * 
+ * Clase principal del programa: SistemaDeInventario
+ * que hace:
+ * 1) Pide al usuario que ingrese el tipo de usuario que es
+ * 2) Si el usuario es Admin, se ejecuta el metodo IngresarContraseñaAdmin de la clase Admin
+ * 3) Si el usuario es Admin, se ejecuta el metodo CompararContraseñaAdmin de la clase Admin
+ * 4) Si el usuario es Admin, se ejecuta el menu de opciones para el admin
+ * 5) Si el usuario es Admin, se ejecuta el metodo AgregarProducto de la clase Inventario
+ * 6) Si el usuario es Admin, se ejecuta el metodo AgregarLocalizacion de la clase Inventario
+ * 7) Si el usuario es Admin, se ejecuta el metodo ModificarProducto de la clase Inventario
+ * 8) Si el usuario es Empleado, se ejecuta el metodo IngresarContraseñaEmpleado de la clase Empleado
+ * 9) Si el usuario es Empleado, se ejecuta el metodo CompararContraseñaEmpleado de la clase Empleado
+ * 10) Si el usuario es Empleado, se ejecuta el menu de opciones para el empleado
+ * 11) Si el usuario es Empleado, se ejecuta el metodo AgregarMovimiento de la clase Inventario
+ * 12) Si el usuario es Empleado, se ejecuta el metodo MostrarInventario de la clase Inventario
+ * 13) Si el usuario es Empleado, se ejecuta el metodo MostrarInventarioPorLocalizacion de la clase Inventario
+ * 14) Si el usuario es Empleado, se ejecuta el metodo MostrarInventarioPorFecha de la clase Inventario
+ * 15) Si el usuario es Empleado, se ejecuta el metodo MostrarInventarioPorTipo de la clase Inventario
+ * 16) Si el usuario es Empleado, se ejecuta el metodo MostrarInventarioPorCantidad de la clase Inventario
+ * 17) Si el usuario es Empleado, se ejecuta el metodo MostrarInventarioPorPrecio de la clase Inventario
+ * 18) Si el usuario es Empleado, se ejecuta el metodo MostrarInventarioPorMovimiento de la clase Inventario
+ * 19) Si el usuario es Empleado, se ejecuta el metodo MostrarInventarioPorFechaMovimiento de la clase Inventario
+ * 20) Si el usuario es Empleado, se ejecuta el metodo MostrarInventarioPorTipoMovimiento de la clase Inventario
  */
 package sistemainventarios;
 import java.util.Scanner;
@@ -37,8 +58,7 @@ public class SistemaDeInventario {
 
         //ejecutar metodo IngresarContraseñaAdmin de la clase Admin
         //ejecutar metodo CompararContraseñaAdmin de la clase Admin
-
-
+        
         
         System.out.println("");//menu de opciones para el admin
         
@@ -70,7 +90,7 @@ public class SistemaDeInventario {
             String descripcion = in.next();
             System.out.println("El siguiente paso es agregar el precio del producto");
             double precio = in.nextDouble();
-            System.out.println("Y por ultimo digite cuanto cuesta el realizar este producto");
+            System.out.println("Y por último, digite cuanto cuesta el realizar este producto");
             double costo = in.nextDouble();
             
             
@@ -90,9 +110,7 @@ public class SistemaDeInventario {
             
         }
         
-               
-                
-                
+                       
         break;    
         
         
